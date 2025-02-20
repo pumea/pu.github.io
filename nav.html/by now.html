@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Now | Tundra Sales</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+               <img src="../image/PM3.png" alt="Logo" width="100">
+                PMG Cars Combodia
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./view Listings.html">View Listings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
+                </ul>
+                <form class="d-flex me-3">
+                    <input class="form-control me-2" type="search" placeholder="Search Cars">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+     <!-- Buy Now Section -->
+    <div class="container my-5">
+    <h2 class="text-center">Complete Your Purchase</h2>
+    <div class="row">
+        <!-- Car Summary -->
+        <div class="col-md-6">
+            <h4>Car Details</h4>
+            <img id="car-image" src="../image/producte/images (1).jpg" class="img-fluid" alt="Car Image">
+            <h5 id="car-title">Tuntra</h5>
+            <p><strong>Price:</strong> <span id="car-price">$59,000</span></p>
+            <p><strong>Mileage:</strong> <span id="car-mileage">0 miles</span></p>
+        </div>
+
+        <!-- Checkout Form -->
+        <div class="col-md-6">
+            <h4>Billing Information</h4>
+            <form action="../PHP/by now.php" method="POST">
+                <input type="hidden" id="car-name" name="car_name">
+                   <input type="hidden" id="car-price-value" name="car_price">
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" name="full_name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Shipping Address</label>
+                            <textarea class="form-control" id="address" name="address" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="paymentMethod" class="form-label">Payment Method</label>
+                            <select class="form-select" id="paymentMethod" name="payment_method" required>
+                                <option value="credit_card">Credit Card</option>
+                                <option value="paypal">PayPal</option>
+                                <option value="bank_transfer">Bank Transfer</option>
+                            </select>
+                        </div>
+                   <button type="submit" class="btn btn-success w-100">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p><strong>Location:</strong> 1234 Toyota Street, Tundra City, TX 75001</p>
+        <p><strong>Contact:</strong> Email: pumeaofficial7@gmail.com | Phone: + (855) 074097269</p>
+        
+        <!-- Social Media Links -->
+        <div class="social-icons">
+            <a href="https://t.me/tundrasales" target="_blank">
+                <img src="../image/icon/icon telegrame.png" alt="Telegram" width="30">
+            </a>
+            <a href="https://facebook.com/tundrasales" target="_blank">
+                <img src="../image/icon/icon facebook.png" alt="Facebook" width="30">
+            </a>
+            <a href="https://tiktok.com/@tundrasales" target="_blank">
+                <img src="../image/icon/icon tik tok.png" alt="TikTok" width="30">
+            </a>
+            <a href="https://youtube.com/tundrasales" target="_blank">
+                <img src="../image/icon/icon youtube.png" alt="YouTube" width="30">
+            </a>
+        </div>
+            <!-- Google Map (Optional) -->
+        <div class="mt-5">
+            <h4 class="text-center">Our Location</h4>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509239!2d-122.41941548468106!3d37.77492977975921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c2c3f6b3d%3A0x78fdfcf999b1a64d!2sToyota%20Dealer!5e0!3m2!1sen!2sus!4v1616923119145!5m2!1sen!2sus" 
+                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+        
+        <p class="mt-3">&copy; 2025 Tundra Sales. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/by now.js"></script>
+</body>
+</html>
